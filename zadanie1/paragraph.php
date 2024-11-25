@@ -9,9 +9,9 @@
     <?php
     $a=97;
     $b=3.14
-    $c='PHP'
+    
     ?>
     <h3 style="colour: red"><?=$a ?> jest liczbą pierwszą </h3>
     <p style="colour: #336ee1"> Liczba Pi zaokrąglana do dwóch miejsc po przecinku: <?=$b ?></p>
-    <div style="colour: green; text-decoration: overline underline;" PHP to jezyk
+    <div style="colour: green; text-decoration: overline underline;" PHP to jezyk div>
     
