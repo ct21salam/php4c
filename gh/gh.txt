@@ -1,0 +1,12 @@
+<VirtualHost *> 
+	DocumentRoot "C:\Users\ct21salam\Documents\GitHub"
+        Alias /github "C:\Users\ct21salam\Documents\GitHub"
+    
+	<Directory "C:\Users\ct21salam\Documents\GitHub">
+        Options Indexes FollowSymLinks MultiViews
+        Require all granted
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
