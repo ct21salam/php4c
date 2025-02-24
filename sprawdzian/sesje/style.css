@@ -1,0 +1,21 @@
+.menu_link{
+    background-color:blue;
+    border-radius:20px;
+    color:white;
+    padding:10px 20px;
+    text-decoration:none;
+}
+.menu_link_active{
+    background-color:black;
+
+}
+.menu_link:hover {
+    background-color:red;
+}
+h1{
+    border-top:solid black 2px;
+   font-weight:bolder;
+}
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
