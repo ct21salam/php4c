@@ -6,29 +6,34 @@
     <title>Document</title>
     <style>
        body{ border:1px solid black;
-            color:red;
-            background-color:gray;
+            color:blue;
+            background-color:white;
        }
        .plik{
         color:aqua;
        }
+      
         </style>
         </head>
 <body>
     <?php
     $do_przeszukania='skanowanie';
     $pliki=scandir($do_przeszukania);
+    
     ?>
     <fieldset>
+        
         <div>Pliki w katalogu <span><?php $do_przeszukania ?></span></div>
         <br>
+        <hr>
+
         <div><?php
         foreach($pliki as $plik){
             if($plik!='.' && $plik !='..'){
-                ?> <div class="plik"><?= $plik?> </div>
+                ?> <a href='<?=$do_przeszukania . '/' . $plik?>'><div class="plik"><?= $plik   . ': ' . filesize($do_przeszukania . '/' . $plik) . ' bytes';?> </a></div>
                 <div><?php ?></div> <?php
             }
-
+           
 
 
 
@@ -36,6 +41,7 @@
 
 
         }?>
+      
         </div>
         </fieldset>
 </body>
