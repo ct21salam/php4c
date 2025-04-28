@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Pierwsza strona</h1>
+    <img src="https://thumbs.dreamstime.com/b/big-smile-emoticon-26256350.jpg">
 </body>
 </html>

@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,td,tr{
+            border:1px solid black;
+            font-size:14px;
+            border-collapse:collapse;
+        }
+        </style>
 </head>
 <body>
+  <h1>Tabela książki</h1>
     <table>
 <?php
-$sql = "SELECT SYGNATURA, TYTUL, CONCAT(IMIE, ' ', NAZWISKO) AS AUTOR, DZIALY.NAZWA AS DZIAL, WYDAWNICTWO, ROK_WYD, OBJETOSC_KS, CENA FROM KSIAZKI INNER JOIN DZIALY ON KSIAZKI.ID_DZIAL = DZIALY.ID_DZIAL WHERE OBJETOSC_KS>500 ORDER BY OBJETOSC_KS";
+$sql = "SELECT SYGNATURA, TYTUL, CONCAT(IMIE, ' ', NAZWISKO) AS AUTOR, DZIALY.NAZWA AS DZIAL, WYDAWNICTWO, ROK_WYD, OBJETOSC_KS, CENA FROM KSIAZKI INNER JOIN DZIALY ON KSIAZKI.ID_DZIAL = DZIALY.ID_DZIAL  ORDER BY OBJETOSC_KS";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) { ?>

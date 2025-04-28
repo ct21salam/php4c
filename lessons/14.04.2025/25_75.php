@@ -11,19 +11,21 @@
 .column {
   float: left;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+ 
 }
 
 .left {
   width: 25%;
   color:white;
   background-color:green;
+  height:500px;
 }
 
 .right {
   width: 75%;
   color:white;
   background-color:blue;
+  
 }
 
 /* Clear floats after the columns */
@@ -41,6 +43,9 @@ padding:5px;
 a:hover{
   background-color:orange;
 }
+.active{
+  background: yellow;
+}
 </style>
 </head>
 <body>
@@ -49,16 +54,25 @@ a:hover{
 
 <div class="row">
   <div class="column left">
-    <h2>Column 1</h2>
-    <p>Some text..</p>
-    <a href="25_75.php?page=glowna">Strona główna</a>
-    <a href="25_75.php?page=jeden">Pierwsza strona</a>
-    <a href="25_75.php?page=tabela">tabela</a>
+    <h2>Wybór</h2>
+    <p></p>
+    <a class="<?= ($_GET['page'] ?? '') == 'glowna' ? 'active' : '' ?>" href="25_75.php?page=glowna">Strona główna</a>
+    <a class="<?= ($_GET['page'] ?? '') == 'jeden' ? 'active' : '' ?>" href="25_75.php?page=jeden">Pierwsza strona</a>
+    <a class="<?= ($_GET['page'] ?? '') == 'tabela_ksiazki' ? 'active' : '' ?>" href="25_75.php?page=tabela_ksiazki
+    ">Tabela książki</a>
+    <a class="<?= ($_GET['page'] ?? '') == 'tabela_dzialy' ? 'active' : '' ?>" href="25_75.php?page=tabela_dzialy
+    ">Tabela działy</a>
+    <a class="<?= ($_GET['page'] ?? '') == 'tabela_czytelnicy' ? 'active' : '' ?>" href="25_75.php?page=tabela_czytelnicy
+    ">Tabela czytelnicy</a>
+    <a class="<?= ($_GET['page'] ?? '') == 'tabela_pracownicy' ? 'active' : '' ?>" href="25_75.php?page=tabela_pracownicy
+    ">Tabela pracownicy</a>
+    <a class="<?= ($_GET['page'] ?? '') == 'tabela_stanowiska' ? 'active' : '' ?>" href="25_75.php?page=tabela_stanowiska
+    ">Tabela stanowsika</a>
+    <a class="<?= ($_GET['page'] ?? '') == 'tabela_wypozyczenia' ? 'active' : '' ?>" href="25_75.php?page=tabela_wypozyczenia
+    ">Tabela wypożyczenia</a>
   </div>
   <div class="column right" >
-    <h2>Column 2</h2>
-    <p>Some text..
-    </p>
+    
     <?php  
       if (isset($_GET['page']))
         {
