@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) { ?>
     <tr>
         <th>Id_dzial</th>
         <th>Nazwa</th>
-       
+       <th> <a href="25_75.php?page=robienie">-</a></th>
     </tr>
 <?php
   while($row = mysqli_fetch_assoc($result)) {
@@ -36,7 +36,7 @@ if (mysqli_num_rows($result) > 0) { ?>
     <tr>
         <td><?= $row["Id_dzial"]?></td>
         <td><?= $row["Nazwa"]?></td>
-        
+        <td><a href="25_75.php?page=edycja&id=<?= $row["Id_dzial"]?>&dzialy=<?= $row["Nazwa"]?>">Edycja</a></td>
     </tr>
 
     <?php
